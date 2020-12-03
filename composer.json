@@ -16,11 +16,12 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "illuminate/support": "^6.0"
+        "php": "^7.4",
+        "illuminate/support": "^8.0",
+        "resto2web/core": "dev-develop"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0",
+        "orchestra/testbench": "^6.0",
         "phpunit/phpunit": "^8.0"
     },
     "autoload": {
@@ -36,7 +37,6 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -50,5 +50,15 @@
                 "Cms": "Resto2web\\Cms\\CmsFacade"
             }
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../core"
+        },
+        {
+            "type": "path",
+            "url": "../admin"
+        }
+    ]
 }
